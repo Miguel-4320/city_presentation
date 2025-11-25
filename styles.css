@@ -75,8 +75,7 @@ main {
   margin-right: auto;
 }
 
-/* === SECCIÓN HERO (Títulos Azules) === */
-/* === HERO === */
+/* === HERO SECTION === */
 .hero {
   background-color: rgb(251, 236, 198);
   color: #2c3e50;
@@ -150,20 +149,39 @@ img {
 }
 
 /* === GRID (DISEÑO MULTI-COLUMNA) === */
-/* GRUPO 1: Todo menos historia (2 COLUMNAS) */
+
+/* GRUPO 1: Estándar 2 Columnas (Atracciones, Servicios, Oficinas) */
 .attractions-container,
 .services-grid,
-.offices-list,
-.water-sports,
-.land-sports,
-.traditional-sports {
+.offices-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* 450px asegura que quepan 2 tarjetas grandes en PC */
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
 
-/* Títulos y descripciones de deportes ocupan ancho completo */
+/* GRUPO 2: Historia 3 Columnas */
+.history-grid {
+  display: grid;
+  /* 280px asegura que quepan 3 tarjetas en PC */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* GRUPO 3: Deportes (GRID CON MEDIA QUERY PARA CENTRAR EL ÚLTIMO) */
+.water-sports,
+.land-sports,
+.traditional-sports {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+  /* Por defecto (Móvil): 1 columna */
+  grid-template-columns: 1fr;
+}
+
+/* Títulos y descripciones de deportes ocupan siempre todo el ancho */
 .water-sports h3,
 .water-sports > p,
 .land-sports h3,
@@ -173,12 +191,27 @@ img {
   grid-column: 1 / -1;
 }
 
-/* GRUPO 2: Solo Historia (3 COLUMNAS) */
-.history-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+/* Query para PC (Más de 900px): 2 Columnas y arreglo del último hijo */
+@media (min-width: 900px) {
+  .water-sports,
+  .land-sports,
+  .traditional-sports {
+     /* Cambiamos a 2 columnas fijas */
+     grid-template-columns: 1fr 1fr; 
+  }
+
+  /* EL TRUCO: El último artículo ocupa las 2 columnas y se centra */
+  .water-sports > article:last-child,
+  .land-sports > article:last-child,
+  .traditional-sports > article:last-child {
+    grid-column: span 2;
+    
+    /* Limitamos el ancho para que no se vea gigante y lo centramos */
+    max-width: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* === TARJETAS === */
@@ -293,24 +326,8 @@ footer {
   font-size: 0.9em;
 }
 
-/* === RESPONSIVE === */
-/* Tablets y pantallas medianas */
-@media (max-width: 992px) {
-  .attractions-container,
-  .services-grid,
-  .offices-list,
-  .water-sports,
-  .land-sports,
-  .traditional-sports {
-    grid-template-columns: 1fr;
-  }
-
-  .history-grid {
-    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
-  }
-}
-
-/* Móviles */
+/* === RESPONSIVE EXTRA === */
+/* Ajustes finos para móviles */
 @media (max-width: 768px) {
   header {
     padding: 10px 0;
@@ -351,17 +368,6 @@ footer {
     text-align: center;
   }
 
-  .attractions-container,
-  .services-grid,
-  .offices-list,
-  .water-sports,
-  .land-sports,
-  .traditional-sports,
-  .history-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
   .intro-images {
     flex-direction: column;
   }
@@ -384,7 +390,6 @@ footer {
   }
 }
 
-/* Móviles pequeños */
 @media (max-width: 480px) {
   header h1 {
     font-size: 1.1em;
@@ -442,7 +447,6 @@ footer {
   justify-content: center;
 }
 
-/* Cuando JavaScript lo muestra */
 #myBtn[style*="display: block"] {
   display: flex !important;
 }
