@@ -11,7 +11,7 @@
       <h1>Discover Lanzarote</h1>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="home.html">Home</a></li>
           <li><a href="history.html">History</a></li>
           <li><a href="Selected sightseeing.html">Sightseeing</a></li>
           <li><a href="services.html">Services</a></li>
@@ -33,11 +33,18 @@
 
       <section class="contact-intro">
         <h3>Lanzarote Tourist Information Offices (OIT)</h3>
-        <img
-          src="assets/images/oit-marina.jpg"
-          alt="Tourist Information Office in Lanzarote"
-          class="intro-image"
-        />
+        <div class="intro-images">
+          <img
+            src="assets/images/oit-main.webp"
+            alt="Tourist Information Office in Lanzarote"
+            class="intro-image"
+          />
+          <img
+            src="assets/images/oit-marina.jpg"
+            alt="Tourist Information Office at Marina"
+            class="intro-image"
+          />
+        </div>
         <p>
           Visit any of our tourist information offices across Lanzarote to get
           help planning your perfect vacation. Our friendly staff is ready to
@@ -206,6 +213,29 @@
             </div>
           </div>
         </article>
+
+        <article class="office-card">
+          <h3>Puerto Mármoles</h3>
+          <img
+            src="assets/images/oit-puertomarmoles.jpg"
+            alt="Tourist
+          Information Office at Puerto Mármoles"
+          />
+          <div class="office-details">
+            <div class="detail-item">
+              <h4>Address:</h4>
+              <p>Puerto Mármoles, Arrecife</p>
+            </div>
+            <div class="detail-item">
+              <h4>Phone Number:</h4>
+              <p><a href="tel:+34928820704">+34 928 820 704</a></p>
+            </div>
+            <div class="detail-item">
+              <h4>Opening Hours:</h4>
+              <p>Monday to Sunday: 10:00 h to 18:00 h</p>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section class="additional-contact">
@@ -233,7 +263,7 @@
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="Selected sightseeing.html">Sightseeing</a></li>
             <li><a href="services.html">Services</a></li>
@@ -247,7 +277,10 @@
         <div class="footer-section">
           <h4>Contact</h4>
           <p>Visit our tourist information offices</p>
-          <p>Phone: <a href="tel:+34928820704" class="footer-phone">+34 928 820 704</a></p>
+          <p>
+            Phone:
+            <a href="tel:+34928820704" class="footer-phone">+34 928 820 704</a>
+          </p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -262,10 +295,15 @@
       var mybutton = document.getElementById("myBtn");
 
       // Cuando bajas 20px, aparece el botón
-      window.onscroll = function() {scrollFunction()};
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
       function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
           mybutton.style.display = "block";
         } else {
           mybutton.style.display = "none";
@@ -274,7 +312,7 @@
 
       // Al hacer clic, sube arriba suavemente
       function topFunction() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
     </script>
   </body>
