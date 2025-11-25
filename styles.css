@@ -146,6 +146,16 @@ img {
   margin-top: 20px;
 }
 
+/* Títulos y descripciones de las secciones de deportes ocupan todo el ancho */
+.water-sports h3,
+.water-sports > p,
+.land-sports h3,
+.land-sports > p,
+.traditional-sports h3,
+.traditional-sports > p {
+  grid-column: 1 / -1;
+}
+
 /* GRUPO 2: Solo Historia (3 COLUMNAS más pequeñas) */
 .history-grid {
   display: grid;
@@ -178,6 +188,20 @@ img {
   height: 220px;
   object-fit: cover;
   margin-bottom: 15px;
+}
+
+/* Contenedor para imagen destacada centrada */
+.featured-image-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.featured-image {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Detalles internos */
