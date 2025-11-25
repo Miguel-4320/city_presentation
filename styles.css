@@ -335,6 +335,71 @@ section img {
   }
 }
 
+/* === HISTORY PAGE: 3-COLUMN LAYOUT & PHOTO GALLERY === */
+/* Page-specific layout for history: 3-column responsive grid */
+.page-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr 320px;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.5rem;
+}
+
+aside.menu {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+aside.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside.menu li + li { margin-top: 0.5rem; }
+
+.content-section { margin-bottom: 1.25rem; }
+
+/* Photo gallery uses CSS columns for a masonry-like flow */
+.photo-gallery {
+  column-count: 2;
+  column-gap: 0.75rem;
+}
+
+.photo-gallery figure {
+  break-inside: avoid;
+  margin: 0 0 0.75rem;
+  background: #fff;
+  border: 1px solid #e9e9e9;
+  padding: 0.35rem;
+  border-radius: 6px;
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.photo-gallery figcaption {
+  font-size: 0.9rem;
+  color: #444;
+  padding-top: 0.35rem;
+}
+
+/* Responsive: stack columns on narrow viewports */
+@media (max-width: 900px) {
+  .page-layout { grid-template-columns: 1fr; }
+  .photo-gallery { column-count: 2; }
+}
+
+@media (max-width: 480px) {
+  .photo-gallery { column-count: 1; }
+}
+
 /* === CONTACT SECTION === */
 .contact-intro {
   text-align: center;
