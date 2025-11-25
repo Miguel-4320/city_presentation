@@ -131,6 +131,24 @@ img {
   border: 1px solid #ddd;
 }
 
+/* Contenedor para imágenes de introducción en Contact Info */
+.intro-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.intro-image {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 350px;
+}
+
 /* === GRID (DISEÑO MULTI-COLUMNA) === */
 /* GRUPO 1: Todo menos historia (2 COLUMNAS) */
 .attractions-container,
