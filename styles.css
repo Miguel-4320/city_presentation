@@ -132,12 +132,215 @@ img {
 
 /* === GRID (DISEÑO MULTI-COLUMNA) === */
 
+<<<<<<< HEAD
 /* GRUPO 1: Todo menos historia (2 COLUMNAS grandes) */
 .attractions-container,
 .services-grid,
 .offices-list,
 .water-sports, 
 .land-sports, 
+=======
+section img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Person images - circular style for portraits */
+.person-card img {
+  max-height: 280px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.person-card img:hover {
+  transform: scale(1.05);
+}
+
+/* === MULTI-COLUMN LAYOUTS === */
+
+/* Office Cards - Two Column Layout */
+
+/* === CHARACTERS GRID (Responsive 3-per-row) === */
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.characters-grid figure {
+  background: #fff;
+  border: 1px solid #e9e9e9;
+  padding: 0.6rem;
+  border-radius: 8px;
+  margin: 0;
+  text-align: center;
+}
+
+.characters-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
+.characters-grid figcaption {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .characters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .characters-grid {
+    grid-template-columns: 1fr;
+  }
+  .characters-grid img {
+    height: 180px;
+  }
+}
+
+
+.offices-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.office-card {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.office-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.office-card h3 {
+  color: #e74c3c;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e74c3c;
+  padding-bottom: 0.5rem;
+}
+
+.office-card img {
+  max-height: 250px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.office-details {
+  margin-top: 1rem;
+}
+
+.detail-item {
+  margin-bottom: 1rem;
+}
+
+.detail-item h4,
+.detail-item h5 {
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
+
+.detail-item p,
+.detail-item a {
+  color: #555;
+}
+
+.detail-item a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.detail-item a:hover {
+  color: #e74c3c;
+  text-decoration: underline;
+}
+
+/* Sport Cards - Three Column Layout */
+.sport-card {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sport-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sport-card h4 {
+  color: #e74c3c;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.sport-card img {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.sport-details {
+  margin-top: 1rem;
+}
+
+/* Water Sports Section - Grid Layout */
+.water-sports,
+.land-sports,
+.traditional-sports,
+.high-performance {
+  padding: 2rem;
+}
+
+.water-sports h3,
+.land-sports h3,
+.traditional-sports h3,
+.high-performance h3 {
+  grid-column: 1 / -1;
+  margin-bottom: 1rem;
+}
+
+.water-sports > p,
+.land-sports > p,
+.traditional-sports > p,
+.high-performance > p {
+  grid-column: 1 / -1;
+  margin-bottom: 1.5rem;
+}
+
+.water-sports,
+.land-sports,
+>>>>>>> 7a00af3ff49f9090a14709741cf351a918f39d38
 .traditional-sports {
   display: grid;
   /* 450px asegura que solo quepan 2 en pantallas normales */
@@ -274,4 +477,104 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+<<<<<<< HEAD
+=======
+
+  section {
+    padding: 1.5rem;
+  }
+
+  .water-sports,
+  .land-sports,
+  .traditional-sports {
+    grid-template-columns: 1fr;
+  }
+
+  .personalities .person-card {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  nav ul li a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  section h3 {
+    font-size: 1.4rem;
+  }
+
+  .offices-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+/* === UTILITY CLASSES === */
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+/* === LINKS === */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e74c3c;
+  text-decoration: underline;
+}
+
+/* === ACCESSIBILITY === */
+*:focus {
+  outline: 2px solid #e74c3c;
+  outline-offset: 2px;
+}
+
+/* === PRINT STYLES === */
+@media print {
+  header,
+  footer,
+  nav {
+    display: none;
+  }
+
+  main {
+    margin-top: 0;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+>>>>>>> 7a00af3ff49f9090a14709741cf351a918f39d38
 }
