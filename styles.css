@@ -175,6 +175,19 @@ section img {
   width: 100%;
 }
 
+/* Person images - circular style for portraits */
+.person-card img {
+  max-height: 280px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.person-card img:hover {
+  transform: scale(1.05);
+}
+
 /* === MULTI-COLUMN LAYOUTS === */
 
 /* Office Cards - Two Column Layout */
@@ -412,6 +425,19 @@ footer {
 }
 
 /* === EVENTS & HISTORY SECTIONS === */
+
+/* Personalities Grid Layout */
+.personalities {
+  padding: 2rem;
+}
+
+.personalities .person-card {
+  display: inline-block;
+  width: calc(50% - 1rem);
+  margin-right: 1rem;
+  vertical-align: top;
+}
+
 .event-card,
 .person-card,
 .place-card {
@@ -445,6 +471,26 @@ footer {
   width: 100%;
   object-fit: cover;
   margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+/* Source note styling */
+.source-note {
+  font-style: italic;
+  color: #7f8c8d;
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Curiosities section */
+.curiosities {
+  background: #ecf0f1;
+}
+
+.curiosities .place-card {
+  background: white;
 }
 
 /* === SERVICES SECTION === */
@@ -525,6 +571,12 @@ footer {
   .water-sports .sport-card,
   .land-sports .sport-card,
   .traditional-sports .sport-card {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .personalities .person-card {
     display: block;
     width: 100%;
     margin-right: 0;
