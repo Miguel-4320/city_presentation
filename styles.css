@@ -446,6 +446,17 @@ footer {
   color: #ecf0f1;
 }
 
+.footer-phone {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease; 
+}
+
+.footer-phone:hover {
+  color: #e74c3c;
+  text-decoration: underline;
+}
+
 /* === EVENTS & HISTORY SECTIONS === */
 
 /* Personalities Grid Layout */
