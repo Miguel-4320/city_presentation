@@ -11,7 +11,7 @@
       <h1>Discover Lanzarote</h1>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="home.html">Home</a></li>
           <li><a href="history.html">History</a></li>
           <li><a href="Selected sightseeing.html">Sightseeing</a></li>
           <li><a href="services.html">Services</a></li>
@@ -303,7 +303,7 @@
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="Selected sightseeing.html">Sightseeing</a></li>
             <li><a href="services.html">Services</a></li>
@@ -314,14 +314,16 @@
         <div class="footer-section">
           <h4>Contact</h4>
           <p>Visit our tourist information offices</p>
-          <p>Phone: <a href="tel:+34928820704" class="footer-phone">+34 928 820 704</a></p>
+          <p>
+            Phone:
+            <a href="tel:+34928820704" class="footer-phone">+34 928 820 704</a>
+          </p>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2025 Lanzarote Tourism. All rights reserved.</p>
       </div>
     </footer>
-
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">⬆</button>
 
@@ -330,10 +332,15 @@
       var mybutton = document.getElementById("myBtn");
 
       // Cuando bajas 20px, aparece el botón
-      window.onscroll = function() {scrollFunction()};
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
       function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
           mybutton.style.display = "block";
         } else {
           mybutton.style.display = "none";
@@ -342,9 +349,8 @@
 
       // Al hacer clic, sube arriba suavemente
       function topFunction() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
     </script>
   </body>
 </html>
-
