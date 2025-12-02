@@ -211,6 +211,57 @@ img {
   }
 }
 
+/* === ARREGLO DE SCROLL === */
+html {
+  scroll-behavior: smooth; /* Desplazamiento suave */
+  /* Esto es la clave: 180px del header + 20px de aire extra */
+  scroll-padding-top: 200px; 
+}
+
+/* === ARREGLO LISTA DE AUTOBUSES === */
+.service-item ul {
+  list-style: none; /* Quita los puntos negros feos */
+  padding: 0;       /* Elimina el margen izquierdo automático */
+  text-align: center; /* Centra el texto de las líneas */
+  margin-top: 15px;
+}
+
+.service-item li {
+  margin-bottom: 8px; /* Da un poco de aire entre la Línea 03 y la 01 */
+  background-color: #fff; /* Opcional: fondo blanco */
+  display: inline-block; /* Opcional: para que no ocupen todo el ancho si no quieres */
+  width: 100%; /* Ocupa el ancho para que se centren bien */
+}
+
+/* INDEX OF SERVICES */
+.services-nav {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+
+.services-nav a {
+  text-decoration: none;
+  background-color: white;
+  color: #2c3e50;
+  border: 1px solid #2c3e50;
+  padding: 10px 20px;
+  border-radius: 30px; 
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 0.95em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.services-nav a:hover {
+  background-color: #e74c3c;
+  color: white;
+  border-color: #e74c3c;
+}
+
 /* GRID */
 
 .attractions-container,
@@ -764,6 +815,7 @@ footer {
   color: red;
   font-weight: bold;
 }
+
 
 /* Error de email oculto por defecto */
 #email-error {

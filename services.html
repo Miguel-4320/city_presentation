@@ -31,7 +31,15 @@
         </p>
       </section>
 
-      <section class="service-category">
+      <div class="services-nav">
+        <a href="#accommodation">Accommodation</a>
+        <a href="#gastronomy">Gastronomy</a>
+        <a href="#transport">Transport</a>
+        <a href="#shopping">Shops</a>
+        <a href="#health">Emergency</a>
+      </div>
+
+      <section class="service-category" id="accommodation">
         <h3>Accommodation</h3>
         <div class="services-grid">
           <article class="service-card">
@@ -69,7 +77,8 @@
       </section>
 
       <hr />
-      <section class="service-category">
+      
+      <section class="service-category" id="gastronomy">
         <h3>Gastronomy & Restaurants</h3>
         <p class="category-intro">
           Arrecife offers a mix of traditional Canarian cuisine and
@@ -109,7 +118,7 @@
         </div>
       </section>
 
-      <section class="service-category">
+      <section class="service-category" id="transport">
         <h3>Public Transport</h3>
 
         <article class="service-item">
@@ -129,12 +138,13 @@
           <h4>Taxi Services</h4>
           <p>
             Taxis are white with a red stripe. They are available 24/7 at main
-            stops or by calling +34 928 803 104.
+            stops or by calling
+            <a href="tel:+34928803104" style="font-weight: bold; color: #e74c3c; text-decoration: none;">+34 928 803 104</a>
           </p>
         </article>
       </section>
 
-      <section class="service-category">
+      <section class="service-category" id="shopping">
         <h3>Shops & Markets</h3>
 
         <div class="services-grid">
@@ -172,11 +182,11 @@
 
       <hr />
 
-      <section class="service-category">
+      <section class="service-category" id="health">
         <h3>Health & Emergency</h3>
         <div class="text-only-service">
           <p>
-            <strong>HOSPITAL José Molina Orosa:</strong> The main general
+            <strong>🏥 HOSPITAL José Molina Orosa:</strong> The main general
             hospital of Lanzarote.
             <br />
             <a
@@ -188,13 +198,13 @@
           </p>
 
           <p>
-            <strong>Emergency Number:</strong>
+            <strong>🆘 Emergency Number:</strong>
             <span class="emergency-number">112</span> (Available in multiple
             languages).
           </p>
 
           <p>
-            <strong>Pharmacy:</strong> Look for a green cross ("Farmacia").
+            <strong>💊 Pharmacy:</strong> Look for a green cross ("Farmacia").
             There is always one open 24/7 in the city center.
           </p>
         </div>
@@ -229,15 +239,17 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Lanzarote Tourism. All rights reserved.</p>
+        <p>© 2025 Lanzarote Tourism. All rights reserved.</p>
       </div>
     </footer>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">⬆</button>
 
     <script>
+      // Conseguir el botón
       var mybutton = document.getElementById("myBtn");
 
+      // Cuando bajas 20px, aparece el botón
       window.onscroll = function () {
         scrollFunction();
       };
