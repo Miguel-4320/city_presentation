@@ -329,30 +329,6 @@
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">⬆</button>
 
-    <script>
-      // Conseguir el botón
-      var mybutton = document.getElementById("myBtn");
-
-      // Cuando bajas 20px, aparece el botón
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      // Al hacer clic, sube arriba suavemente
-      function topFunction() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

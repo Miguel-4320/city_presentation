@@ -1,5 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // ========== Go to Top Button ==========
+  var mybutton = document.getElementById("myBtn");
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // Asignar la función al botón
+  if (mybutton) {
+    mybutton.onclick = topFunction;
+  }
+
+  // ========== Form Review Validation ==========
+  
   // Función para validar email
   function esEmailValido(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

@@ -134,9 +134,6 @@
         </article>
       </section>
     </main>
-
-    <button onclick="topFunction()" id="myBtn" title="Go to top">⬆</button>
-
     <footer>
       <div class="footer-content">
         <div class="footer-section">
@@ -169,24 +166,8 @@
       </div>
     </footer>
 
-    <script>
-      var mybutton = document.getElementById("myBtn");
-      window.onscroll = function () {
-        scrollFunction();
-      };
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-      function topFunction() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    </script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">⬆</button>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
