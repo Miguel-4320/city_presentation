@@ -577,3 +577,131 @@ footer {
 .text-only-service a { text-decoration: underline; color: #0056b3; }
 .emergency-number { color: red; font-weight: bold; }
 #email-error { display: none; color: #e74c3c; font-size: 0.9em; margin-top: 5px; }
+
+/* ==================================================
+   Responsive fixes and header-offset overrides
+   Appended to override earlier rules where needed
+   ================================================== */
+:root {
+  --header-height: 120px;
+  --gutter: 20px;
+}
+
+@media (max-width: 768px) {
+  :root { --header-height: 100px; }
+}
+@media (max-width: 480px) {
+  :root { --header-height: 80px; }
+}
+
+/* Prevent accidental horizontal scroll from small overflows */
+html, body { max-width: 100%; overflow-x: hidden; box-sizing: border-box; }
+
+/* MAIN & HERO responsive-friendly overrides */
+main {
+  margin-top: calc(var(--header-height) + 20px);
+  padding: var(--gutter);
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Use header-based scroll offset so anchors don't hide under header */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 10px);
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/fotofondo.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  border: none;
+}
+
+@media (max-width: 768px) { .hero { padding: 60px 18px; } }
+@media (max-width: 480px) { .hero { padding: 40px 14px; } }
+
+/* GRIDS: make columns more flexible (allow smaller min widths) */
+.attractions-container,
+.services-grid,
+.offices-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* IMAGE / CARD HEIGHTS: avoid fixed heights that break layout */
+.attraction-img, .service-img, .sport-card img, .person-card img, .place-card img,
+.office-card img, .intro-image, .image-tile img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 15px;
+  background-color: transparent;
+  display: block;
+  border-radius: 12px;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.featured-image-container { text-align: center; margin: 2rem 0; }
+.featured-image { max-width: 600px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+
+.intro-images { gap: 20px; align-items: center; margin: 1rem 0; }
+.intro-image { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; }
+
+.image-tile img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
+
+@media (max-width: 480px) { .image-tile img { aspect-ratio: 4 / 3; } }
+
+/* LIST / INLINE FIXES */
+.service-item ul { list-style: none; padding: 0; text-align: center; margin-top: 15px; }
+.service-item li { margin-bottom: 8px; background-color: #fff; display: block; width: 100%; }
+
+.services-nav a { white-space: nowrap; }
+
+/* SCROLL-TO-TOP BUTTON override to keep behaviour intact */
+#myBtn { display: none; }
+#myBtn[style*="display: block"] { display: flex !important; }
+
+/* MEDIA QUERY TWEAKS to align header variable usage */
+@media (max-width: 768px) {
+  header { padding: 10px 0; }
+  header h1 { font-size: 1.3em; margin-bottom: 5px; }
+  nav { padding: 5px 0; }
+  nav ul { flex-direction: row; justify-content: center; gap: 5px; }
+  nav ul li { margin: 2px; flex: 0 0 auto; }
+  nav ul li a { padding: 6px 10px; font-size: 0.85em; }
+  main { margin-top: calc(var(--header-height) + 5px); padding: 15px; }
+  .footer-content { flex-direction: column; text-align: center; }
+  .featured-image { max-width: 100%; }
+  .hero h2 { font-size: 1.6em; }
+  section { padding: 15px; }
+}
+
+@media (max-width: 480px) {
+  header h1 { font-size: 1.1em; }
+  nav ul { gap: 3px; }
+  nav ul li a { padding: 5px 8px; font-size: 0.75em; }
+  main { margin-top: calc(var(--header-height) + 5px); }
+  .hero h2 { font-size: 1.3em; }
+  section h3 { font-size: 1.1em; }
+  .office-card img, .sport-card img, .person-card img, .place-card img { aspect-ratio: 4 / 3; }
+}
