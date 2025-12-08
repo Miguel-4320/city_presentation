@@ -22,26 +22,26 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  // Asignar la función al botón
+  // Assign the function to the button
   if (mybutton) {
     mybutton.onclick = topFunction;
   }
 
   // ========== Form Review Validation ==========
   
-  // Función para validar email
+  // Function to validate email
   function esEmailValido(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   }
 
-  // Función para validar que hay al menos una palabra (mínimo 3 caracteres sin espacios)
+  // Function to validate that there is at least one word (minimum 3 characters without spaces)
   function tieneAlMenosUnaPalabra(texto) {
     const palabras = texto.trim().split(/\s+/);
     return palabras.length > 0 && palabras[0].length >= 1;
   }
 
-  // Validación del formulario de reseñas
+  // Review form validation
   const formResena = document.getElementById("review-form");
   if (formResena) {
     // IDs in Contact information.html
@@ -59,10 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const esEmailOk = emailInput && esEmailValido(emailInput.value);
       const esReviewOk = reviewInput && tieneAlMenosUnaPalabra(reviewInput.value);
 
-      // Solo mostrar error visual en el email
+      // Only show visual error on email
       setValidationError(emailInput, !esEmailOk);
 
-      // Habilitar/deshabilitar el botón de envío (si existe)
+      // Enable/disable the submit button (if it exists)
       if (submitBtn) submitBtn.disabled = !(esNombreOk && esEmailOk && esReviewOk);
     };
 
@@ -71,13 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
     formResena.addEventListener("submit", (event) => {
       event.preventDefault();
       if (!submitBtn.disabled) {
-        alert("Reseña enviada correctamente (simulación).");
+        alert("Review sent successfully (simulation).");
         formResena.reset();
-        validateFormResena(); // Re-validar para deshabilitar el botón
+        validateFormResena(); // Re-validate to disable the button
       }
     });
 
-    // Validación inicial
+    // Initial validation
     validateFormResena();
   }
 });
