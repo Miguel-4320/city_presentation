@@ -208,12 +208,6 @@ img {
   }
 }
 
-/* Scroll Adjustment */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 200px; /* Offset for fixed header */
-}
-
 /* Bus Lines List Fix */
 .service-item ul {
   list-style: none; /* Remove bullets */
@@ -805,7 +799,7 @@ main {
 /* Use header-based scroll offset so anchors don't hide under header */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + 10px);
+  scroll-padding-top: calc(var(--header-height) + 30px);
 }
 
 .hero {
@@ -1004,7 +998,6 @@ html {
    than grid for last-row items when there are fewer cards. */
 @media (min-width: 900px) {
   .attractions-container,
-  .services-grid,
   .offices-list {
     display: flex !important;
     flex-wrap: wrap;
@@ -1014,7 +1007,6 @@ html {
   }
 
   .attractions-container > .attraction-card,
-  .services-grid > .service-item,
   .offices-list > .office-card {
     flex: 0 1 420px;
     max-width: 420px;
@@ -1025,7 +1017,6 @@ html {
 
   /* Ensure nested details boxes expand correctly when using flex */
   .attraction-card .card-content,
-  .service-item,
   .office-card {
     display: flex;
     flex-direction: column;
