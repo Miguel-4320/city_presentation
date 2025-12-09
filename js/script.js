@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // ========== Go to Top Button ==========
+  //Go to Top Button 
   var mybutton = document.getElementById("myBtn");
 
   window.onscroll = function () {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     mybutton.onclick = topFunction;
   }
 
-  // ========== Form Review Validation ==========
+  //Form Review Validation
   
   // Function to validate email
   function esEmailValido(email) {
