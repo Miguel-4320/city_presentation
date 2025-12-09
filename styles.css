@@ -286,16 +286,6 @@ html {
   }
 }
 
-/* Common image tile sizing */
-.image-tile img {
-  width: 100%;
-  height: 220px;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-  background-color: transparent;
-}
-
 /* Row of 3 images */
 .row-3 {
   display: grid;
@@ -861,8 +851,7 @@ html {
 .person-card img,
 .place-card img,
 .office-card img,
-.intro-image,
-.image-tile img {
+.intro-image{
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
