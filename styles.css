@@ -7,9 +7,8 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
     "SF Pro Text", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.47059;
+  line-height: 1.5;
   font-weight: 400;
-  letter-spacing: -0.022em;
   color: #1d1d1f;
   background-color: #f5f5f7;
   font-size: 17px;
@@ -17,36 +16,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Apple-style headings */
-h1,
-h2,
-h3 {
-  font-weight: 600;
-  letter-spacing: -0.005em;
-}
-
 h1 {
   font-size: 48px;
-  line-height: 1.08349;
+  line-height: 1;
   font-weight: 700;
-  letter-spacing: -0.003em;
 }
 
 h2 {
   font-size: 40px;
-  line-height: 1.1;
+  line-height: 1;
   font-weight: 600;
-  letter-spacing: 0em;
 }
 
 h3 {
   font-size: 28px;
-  line-height: 1.14286;
+  line-height: 1;
   font-weight: 600;
-  letter-spacing: 0.007em;
 }
 
-/* Fixed Header */
+/* Here we change the header part*/
 header {
   background-color: #2c3e50;
   color: white;
@@ -63,7 +51,6 @@ header h1 {
   margin-bottom: 10px;
 }
 
-/* Navigation */
 nav {
   background-color: #34495e;
   padding: 10px 0;
@@ -94,7 +81,6 @@ nav ul li a.active {
   border-radius: 4px;
 }
 
-/* Main Content Container */
 main {
   margin-top: 180px;
   padding: 20px;
@@ -103,7 +89,7 @@ main {
   margin-right: auto;
 }
 
-/* Hero Section */
+/* Here we change the hero part for the part under the header*/
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("assets/images/fotofondo.jpg");
@@ -114,14 +100,12 @@ main {
   text-align: center;
   margin-bottom: 40px;
   border-radius: 0 0 15px 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   border: none;
 }
 
 .hero h2 {
-  font-size: 3em;
+  font-size: 51px;
   margin-bottom: 15px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -131,9 +115,8 @@ main {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.3em;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-  line-height: 1.4;
+  font-size: 22px;
+  line-height: 1.5;
 }
 
 section {
@@ -154,16 +137,16 @@ section h4 {
   color: #e74c3c;
   margin-bottom: 10px;
   margin-top: 20px;
-  font-size: 1.2em;
+  font-size: 18 px;
   text-align: center;
 }
 
 section p {
   text-align: justify;
-  margin-bottom: 1rem;
+  margin-bottom: 17px;
 }
 
-/* Remove bullets from additional contact list */
+/* We removed bullets points from contact list */
 .additional-contact ul {
   list-style: none;
   padding-left: 0;
@@ -171,7 +154,7 @@ section p {
 
 .additional-contact li {
   margin-bottom: 15px;
-  line-height: 1.8;
+  line-height: 2;
 }
 
 /* Images */
@@ -181,13 +164,13 @@ img {
   border: 1px solid #ddd;
 }
 
-/* Intro Images Grid (Contact Page) */
+/* First two images from the conttact page */
 .intro-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: center;
-  margin: 1rem 0;
+  margin: 16px 0;
 }
 
 .intro-image {
@@ -198,7 +181,7 @@ img {
   object-position: center;
 }
 
-/* Intro images responsive */
+/* responsive of the last two images we mentioned */
 @media (max-width: 768px) {
   .intro-images {
     grid-template-columns: 1fr;
@@ -208,7 +191,7 @@ img {
   }
 }
 
-/* Bus Lines List Fix */
+/* List of the buses lines */
 .service-item ul {
   list-style: none;
   padding: 0; 
@@ -223,7 +206,7 @@ img {
   width: 100%;
 }
 
-/* Services Navigation Index */
+/* Services navigation*/
 .services-nav {
   display: flex;
   flex-wrap: wrap;
@@ -241,7 +224,7 @@ img {
   padding: 10px 20px;
   border-radius: 30px;
   font-weight: bold;
-  font-size: 0.95em;
+  font-size: 17px;
 }
 
 .services-nav a:hover {
@@ -250,18 +233,17 @@ img {
   border-color: #e74c3c;
 }
 
-/* GROUP 1: Everything except History (2 Columns on PC) */
+/* Grid for having two columns in the pages */
 .attractions-container,
 .services-grid,
 .offices-list {
   display: grid;
-  /* 450px ensures 2 large cards fit on PC */
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
 
-/* GROUP 2: History (responsive; force 4 columns on wide viewports) */
+/* Grid for having four columns in the pages */
 .history-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -269,16 +251,14 @@ img {
   margin-top: 20px;
 }
 
-/* Prevent a 5-up row on very wide screens: cap to 4 columns at desktop widths */
+/* If its wider than 1100 then we ensure to have four columns lways*/
 @media (min-width: 1100px) {
-  /* Apply 4-column layout only to the Personalities grid so other
-     history-grid usages (e.g., curiosities) can flow naturally. */
   .personalities .history-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Row of 3 images */
+/* The grid format for the events page */
 .row-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -286,7 +266,7 @@ img {
   align-items: stretch;
 }
 
-/* Block of 5 images */
+/* Change display to block and sort the images*/
 .block-five {
   display: block;
 }
@@ -304,24 +284,22 @@ img {
 }
 .block-five .bottom figure {
   margin: 0;
-  flex: 0 1 calc(40% - 6px);
+  flex: 0 1 40%;
   max-width: 480px;
 }
 .block-five figure {
   margin: 0;
 }
 
-/* Remove borders/background for gallery images */
 .block-five figure,
 .block-five img,
 .image-tile figure,
 .image-tile img {
   border: none !important;
   background: transparent !important;
-  box-shadow: none !important;
 }
 
-/* Row of 2 images */
+/* Change the row where there are two images*/
 .row-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -329,12 +307,12 @@ img {
   align-items: stretch;
 }
 
-/* Responsive Galleries */
+/* Responsive photos for events page*/
 @media (max-width: 900px) {
   .row-3 {
     grid-template-columns: repeat(2, 1fr);
   }
-  /* Center 3rd item */
+  /* Center the thrid image*/
   .row-3 figure:nth-child(3) {
     grid-column: 1 / -1;
     justify-self: center;
@@ -390,17 +368,17 @@ img {
   }
 }
 
-/* GROUP 3: Sports (Grid with Media Query to center last item) */
+/* Grid for the sports page*/
 .water-sports,
 .land-sports,
 .traditional-sports {
   display: grid;
   gap: 20px;
   margin-top: 20px;
-  grid-template-columns: 1fr; /* Mobile default: 1 column */
+  grid-template-columns: 1fr;
 }
 
-/* Sports titles span full width */
+/* Here we manage de paragraph sons of each sport*/
 .water-sports h3,
 .water-sports > p,
 .land-sports h3,
@@ -410,7 +388,7 @@ img {
   grid-column: 1 / -1;
 }
 
-/* PC Query (>900px): 2 Columns & Center Last Child */
+/* The structure of the grid so its two images for row and then the last image is only one and fill the space */
 @media (min-width: 900px) {
   .water-sports,
   .land-sports,
@@ -440,20 +418,19 @@ img {
   padding: 15px;
 }
 
-/* Featured Image Container */
+/* The ironman image of sports page*/
 .featured-image-container {
   text-align: center;
-  margin: 2rem 0;
+  margin: 34px 0;
 }
 .featured-image {
   max-width: 600px;
   width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Internal Details Boxes */
+/* Inside text */
 .office-details,
 .details-box,
 .sport-details {
@@ -467,7 +444,6 @@ img {
   justify-content: space-between;
 }
 
-/* Detail Items Styling */
 .detail-item strong {
   display: inline;
   margin-right: 5px;
@@ -549,13 +525,13 @@ footer {
   font-size: 0.9em;
 }
 
-/* Mobile Adjustments */
+/* Media for mobile devices */
 @media (max-width: 768px) {
   header {
     padding: 10px 0;
   }
   header h1 {
-    font-size: 1.3em;
+    font-size: 22px;
     margin-bottom: 5px;
   }
 
@@ -573,7 +549,7 @@ footer {
   }
   nav ul li a {
     padding: 6px 10px;
-    font-size: 0.85em;
+    font-size: 15px;
   }
 
   main {
@@ -589,32 +565,33 @@ footer {
     max-width: 100%;
   }
   .hero h2 {
-    font-size: 1.5em;
+    font-size: 25px;
   }
   section {
     padding: 15px;
   }
 }
 
+/* Media for smaller devices*/
 @media (max-width: 480px) {
   header h1 {
-    font-size: 1.1em;
+    font-size: 18px;
   }
   nav ul {
     gap: 3px;
   }
   nav ul li a {
     padding: 5px 8px;
-    font-size: 0.75em;
+    font-size: 13px;
   }
   main {
     margin-top: 90px;
   }
   .hero h2 {
-    font-size: 1.3em;
+    font-size: 22px;
   }
   section h3 {
-    font-size: 1.1em;
+    font-size: 18px;
   }
 
   .office-card img,
@@ -641,7 +618,6 @@ footer {
   border-radius: 50%;
   font-size: 30px;
   line-height: 1;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   align-items: center;
   justify-content: center;
@@ -653,10 +629,9 @@ footer {
 #myBtn:hover {
   background-color: #2c3e50;
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Review Form */
+/* Form from the contact page*/
 .form-control {
   width: 100%;
   padding: 12px 15px;
@@ -669,7 +644,6 @@ footer {
 .form-control:focus {
   outline: none;
   border-color: #2c3e50;
-  box-shadow: 0 0 5px rgba(44, 62, 80, 0.3);
 }
 .form-control.has-error {
   border-color: #e74c3c;
@@ -691,11 +665,9 @@ footer {
 #btn-send-review:hover {
   opacity: 0.85;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
 }
 #btn-send-review:active {
   transform: translateY(0) scale(0.98);
-  box-shadow: 0 2px 6px rgba(44, 62, 80, 0.3);
 }
 #btn-send-review:disabled {
   opacity: 0.6;
@@ -703,7 +675,6 @@ footer {
   transform: none;
 }
 
-/* Utilities */
 .attraction-card a {
   text-decoration: none;
   color: inherit;
@@ -725,10 +696,11 @@ footer {
 #email-error {
   display: none;
   color: #e74c3c;
-  font-size: 0.9em;
+  font-size: 16px;
   margin-top: 5px;
 }
 
+/* Change variables to manage responsiveness*/
 :root {
   --header-height: 120px;
   --gutter: 20px;
@@ -745,7 +717,6 @@ footer {
   }
 }
 
-/* Prevent accidental horizontal scroll from small overflows */
 html,
 body {
   max-width: 100%;
@@ -753,7 +724,6 @@ body {
   box-sizing: border-box;
 }
 
-/* MAIN & HERO responsive-friendly overrides */
 main {
   margin-top: calc(var(--header-height) + 20px);
   padding: var(--gutter);
@@ -762,24 +732,10 @@ main {
   margin-right: auto;
 }
 
-/* Use header-based scroll offset so anchors don't hide under header */
+/* Add padding-top so the header does not cover the text */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 30px);
-}
-
-.hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("assets/images/fotofondo.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-  margin-bottom: 40px;
-  border-radius: 0 0 15px 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  border: none;
 }
 
 @media (max-width: 768px) {
@@ -793,7 +749,7 @@ html {
   }
 }
 
-/* GRIDS: make columns more flexible (allow smaller min widths) */
+/* Fixing previous changes */
 .attractions-container,
 .services-grid,
 .offices-list {
@@ -804,7 +760,7 @@ html {
 }
 
 
-/* IMAGE / CARD HEIGHTS: avoid fixed heights that break layout */
+/* Properties of home images */
 .attraction-img,
 .service-img,
 .sport-card img,
@@ -825,22 +781,10 @@ html {
   box-shadow: none !important;
 }
 
-.featured-image-container {
-  text-align: center;
-  margin: 2rem 0;
-}
-.featured-image {
-  max-width: 600px;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 .intro-images {
   gap: 20px;
   align-items: center;
-  margin: 1rem 0;
+  margin: 17px 0;
 }
 .intro-image {
   width: 100%;
@@ -862,7 +806,7 @@ html {
   }
 }
 
-/* LIST / INLINE FIXES */
+/* Properties for service list*/
 .service-item ul {
   list-style: none;
   padding: 0;
@@ -880,88 +824,7 @@ html {
   white-space: nowrap;
 }
 
-/* SCROLL-TO-TOP BUTTON override to keep behaviour intact */
-#myBtn {
-  display: none;
-}
-#myBtn[style*="display: block"] {
-  display: flex !important;
-}
-
-/* MEDIA QUERY TWEAKS to align header variable usage */
-@media (max-width: 768px) {
-  header {
-    padding: 10px 0;
-  }
-  header h1 {
-    font-size: 1.3em;
-    margin-bottom: 5px;
-  }
-  nav {
-    padding: 5px 0;
-  }
-  nav ul {
-    flex-direction: row;
-    justify-content: center;
-    gap: 5px;
-  }
-  nav ul li {
-    margin: 2px;
-    flex: 0 0 auto;
-  }
-  nav ul li a {
-    padding: 6px 10px;
-    font-size: 0.85em;
-  }
-  main {
-    margin-top: calc(var(--header-height) + 5px);
-    padding: 15px;
-  }
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .featured-image {
-    max-width: 100%;
-  }
-  .hero h2 {
-    font-size: 1.6em;
-  }
-  section {
-    padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.1em;
-  }
-  nav ul {
-    gap: 3px;
-  }
-  nav ul li a {
-    padding: 5px 8px;
-    font-size: 0.75em;
-  }
-  main {
-    margin-top: calc(var(--header-height) + 5px);
-  }
-  .hero h2 {
-    font-size: 1.3em;
-  }
-  section h3 {
-    font-size: 1.1em;
-  }
-  .office-card img,
-  .sport-card img,
-  .person-card img,
-  .place-card img {
-    aspect-ratio: 4 / 3;
-  }
-}
-
-/* FLEXBOX OVERRIDE FOR LARGE VIEWPORTS: more reliable centering
-   than grid for last-row items when there are fewer cards. */
+/* fix override errors in sightseeing and contact pages*/
 @media (min-width: 900px) {
   .attractions-container,
   .offices-list {
@@ -981,7 +844,6 @@ html {
     margin: 0;
   }
 
-  /* Ensure nested details boxes expand correctly when using flex */
   .attraction-card .card-content,
   .office-card {
     display: flex;
