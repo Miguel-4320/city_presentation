@@ -208,12 +208,6 @@ img {
   }
 }
 
-/* Scroll Adjustment */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 200px; /* Offset for fixed header */
-}
-
 /* Bus Lines List Fix */
 .service-item ul {
   list-style: none; /* Remove bullets */
