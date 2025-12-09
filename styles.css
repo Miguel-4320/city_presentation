@@ -210,9 +210,9 @@ img {
 
 /* Bus Lines List Fix */
 .service-item ul {
-  list-style: none; /* Remove bullets */
-  padding: 0; /* Remove left padding */
-  text-align: center; /* Center text */
+  list-style: none;
+  padding: 0; 
+  text-align: center; 
   margin-top: 15px;
 }
 
@@ -241,9 +241,7 @@ img {
   padding: 10px 20px;
   border-radius: 30px;
   font-weight: bold;
-  transition: all 0.3s ease;
   font-size: 0.95em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .services-nav a:hover {
