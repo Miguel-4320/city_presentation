@@ -815,7 +815,7 @@ main {
 /* Use header-based scroll offset so anchors don't hide under header */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + 10px);
+  scroll-padding-top: calc(var(--header-height) + 30px);
 }
 
 .hero {
